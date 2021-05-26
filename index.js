@@ -6,8 +6,8 @@ camelToSnake(palabraCamel);
 
 function camelToSnake(palabra) {
   let resultadoFormateado;
-  resultadoFormateado = camelFormatToSnake(palabra);
 
+  resultadoFormateado = camelFormatToSnake(palabra);
   console.log(resultadoFormateado);
 }
 
@@ -35,8 +35,11 @@ function camelFormatToSnake(palabra) {
 
 function snakeToCamel(palabra) {
   let resultadoArray;
+  let resultadoFormateado;
+
   resultadoArray = snakeFormatToArray(palabra);
-  arrayPalabrasSnakesToCamel(resultadoArray);
+  resultadoFormateado = arrayPalabrasSnakesToCamel(resultadoArray);
+  console.log(resultadoFormateado);
 }
 
 function snakeFormatToArray(palabra) {
@@ -54,5 +57,5 @@ function arrayPalabrasSnakesToCamel(arrayPalabras) {
     }
   });
 
-  console.log(palabraFinalCamel);
+  return palabraFinalCamel;
 }
