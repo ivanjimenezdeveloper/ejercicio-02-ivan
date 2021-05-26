@@ -1,13 +1,49 @@
 let palabraSnake = "hola-como-estas";
-let palabraCamel = "holaComoEstas";
+let palabraCamel = "holaComoAndamios";
 
-let palabraFinalSnake;
+snakeToCamel(palabraSnake);
+camelToSnake(palabraCamel);
 
-palabraSnake = palabraSnake.split("-");
+function camelToSnake(palabra) {
+  let resultadoFormateado;
+  resultadoFormateado = camelFormatToSnake(palabra);
 
-arrayPalabrasToCamel(palabraSnake);
+  console.log(resultadoFormateado);
+}
 
-function arrayPalabrasToCamel(arrayPalabras) {
+function addStr(str, index, stringToAdd) {
+  return (
+    str.substring(0, index) + stringToAdd + str.substring(index, str.length)
+  );
+}
+
+function camelFormatToSnake(palabra) {
+  let letraToCheck;
+  const separador = "_";
+
+  for (let contador = 0; contador < palabra.length; contador++) {
+    letraToCheck = palabra.charAt(contador);
+
+    if (letraToCheck === letraToCheck.toUpperCase()) {
+      palabra = addStr(palabra, contador, separador);
+      contador++;
+    }
+  }
+
+  return palabra.toLowerCase();
+}
+
+function snakeToCamel(palabra) {
+  let resultadoArray;
+  resultadoArray = snakeFormatToArray(palabra);
+  arrayPalabrasSnakesToCamel(resultadoArray);
+}
+
+function snakeFormatToArray(palabra) {
+  return (palabra = palabra.split("-"));
+}
+
+function arrayPalabrasSnakesToCamel(arrayPalabras) {
   let palabraFinalCamel;
 
   arrayPalabras.forEach((element) => {
