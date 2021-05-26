@@ -80,11 +80,11 @@ function snakeFormatToArray(palabra) {
 function arrayPalabrasSnakeToCamel(arrayPalabras) {
   let palabraFinalCamel;
 
-  arrayPalabras.forEach((element) => {
-    if (typeof palabraFinalCamel !== "undefined") {
+  arrayPalabras.forEach((element, index) => {
+    if (typeof palabraFinalCamel !== "undefined" && index !== 0) {
       palabraFinalCamel += element[0].toUpperCase() + element.substring(1);
     } else {
-      palabraFinalCamel = element[0].toUpperCase() + element.substring(1);
+      palabraFinalCamel = element;
     }
   });
 
