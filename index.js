@@ -1,5 +1,5 @@
-let palabraSnake = "hola-como-estas";
-let palabraCamel = "holaComoAndamios";
+const palabraSnake = "hola-como-estas";
+const palabraCamel = "holaComoAndamios";
 
 snakeToCamel(palabraSnake);
 camelToSnake(palabraCamel);

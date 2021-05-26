@@ -21,8 +21,8 @@ module.exports = {
     "func-names": "off",
     "consistent-return": "off",
     "space-before-function-paren": "off",
-    "no-param-reassign": "off",
     "no-restricted-globals": "off",
+    "no-param-reassign": "off",
     "guard-for-in": "off",
   },
 };
